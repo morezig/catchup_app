@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class MyReviewsScreen extends StatelessWidget {
   const MyReviewsScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/product_page_controller.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/product_page_controller.dart';
 
 class ColorSelectionColumn extends StatelessWidget {
   final List<Color> colorsList;
@@ -34,9 +34,7 @@ class ColorSelectionColumn extends StatelessWidget {
                     shape: BoxShape.circle,
                     border: Border.all(
                       width: 5,
-                      color: (_controller.colorIndex.value == i)
-                          ? kTinGrey
-                          : kSnowFlakeWhite,
+                      color: (_controller.colorIndex.value == i) ? kTinGrey : kSnowFlakeWhite,
                     ),
                   ),
                 ),

@@ -1,4 +1,4 @@
-name: timberr
+name: catchup_app
 description: A furniture shopping app made using Flutter, Firebase and Getx state management.
 
 publish_to: 'none'

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final VoidCallback onTap;

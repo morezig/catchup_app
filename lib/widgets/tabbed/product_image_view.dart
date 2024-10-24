@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/product_page_controller.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/product_page_controller.dart';
 
 class ProductImageView extends StatelessWidget {
   final List<String> imagesList;
@@ -61,9 +61,7 @@ class ProductImageView extends StatelessWidget {
                     curve: Curves.bounceOut,
                     margin: const EdgeInsets.only(right: 10),
                     decoration: BoxDecoration(
-                      color: (_controller.imageIndex.value == i)
-                          ? kOffBlack
-                          : kSnowFlakeWhite,
+                      color: (_controller.imageIndex.value == i) ? kOffBlack : kSnowFlakeWhite,
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),

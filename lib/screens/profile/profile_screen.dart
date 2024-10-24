@@ -2,17 +2,17 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/address_controller.dart';
-import 'package:timberr/controllers/card_details_controller.dart';
-import 'package:timberr/controllers/user_controller.dart';
-import 'package:timberr/screens/profile/my_reviews_screen.dart';
-import 'package:timberr/screens/profile/orders_screen.dart';
-import 'package:timberr/screens/profile/payment_methods_screen.dart';
-import 'package:timberr/screens/profile/settings_screen.dart';
-import 'package:timberr/screens/profile/shipping_address_screen.dart';
-import 'package:timberr/widgets/tabbed/bottom_navbar.dart';
-import 'package:timberr/widgets/tiles/profile_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/address_controller.dart';
+import 'package:catchup_app/controllers/card_details_controller.dart';
+import 'package:catchup_app/controllers/user_controller.dart';
+import 'package:catchup_app/screens/profile/my_reviews_screen.dart';
+import 'package:catchup_app/screens/profile/orders_screen.dart';
+import 'package:catchup_app/screens/profile/payment_methods_screen.dart';
+import 'package:catchup_app/screens/profile/settings_screen.dart';
+import 'package:catchup_app/screens/profile/shipping_address_screen.dart';
+import 'package:catchup_app/widgets/tabbed/bottom_navbar.dart';
+import 'package:catchup_app/widgets/tiles/profile_tile.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({super.key});
@@ -108,8 +108,7 @@ class ProfileScreen extends StatelessWidget {
                         ? const CircleAvatar(
                             radius: 40,
                             backgroundColor: Colors.white,
-                            foregroundImage:
-                                AssetImage("assets/default_avatar.png"),
+                            foregroundImage: AssetImage("assets/default_avatar.png"),
                           )
                         : CircleAvatar(
                             radius: 40,
@@ -148,8 +147,7 @@ class ProfileScreen extends StatelessWidget {
               const Spacer(),
               GetBuilder<AddressController>(
                 builder: (addressController) {
-                  String addressCount =
-                      addressController.addressList.length.toString();
+                  String addressCount = addressController.addressList.length.toString();
                   if (addressCount != '0' && addressCount.length == 1) {
                     addressCount = '0$addressCount';
                   }
@@ -164,8 +162,7 @@ class ProfileScreen extends StatelessWidget {
               Obx(() {
                 return ProfileTile(
                   name: "Payment Method",
-                  description:
-                      "You have ${_cardDetailsController.cardDetailList.length} cards",
+                  description: "You have ${_cardDetailsController.cardDetailList.length} cards",
                   onTap: _toPaymentMethodsScreen,
                 );
               }),

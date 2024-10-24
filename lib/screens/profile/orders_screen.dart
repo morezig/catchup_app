@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/widgets/cards/order_card.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/widgets/cards/order_card.dart';
 
 class OrdersScreen extends StatelessWidget {
   const OrdersScreen({super.key});
@@ -40,8 +40,7 @@ class OrdersScreen extends StatelessWidget {
             indicatorSize: TabBarIndicatorSize.label,
             indicatorWeight: 2,
             indicatorColor: kOffBlack,
-            indicatorPadding:
-                const EdgeInsets.only(left: 16, right: 16, top: 43),
+            indicatorPadding: const EdgeInsets.only(left: 16, right: 16, top: 43),
             tabs: const [
               Tab(
                 text: "Delivered",

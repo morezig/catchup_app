@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/controllers/home_controller.dart';
-import 'package:timberr/models/category.dart';
-import 'package:timberr/widgets/buttons/category_button.dart';
+import 'package:catchup_app/controllers/home_controller.dart';
+import 'package:catchup_app/models/category.dart';
+import 'package:catchup_app/widgets/buttons/category_button.dart';
 
 class CategoryTabBar extends StatelessWidget {
   CategoryTabBar({super.key});

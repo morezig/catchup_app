@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/home_controller.dart';
-import 'package:timberr/screens/cart/cart_screen.dart';
-import 'package:timberr/screens/search_delegate/product_search_delegate.dart';
-import 'package:timberr/widgets/tabbed/bottom_navbar.dart';
-import 'package:timberr/widgets/tabbed/category_tab_bar.dart';
-import 'package:timberr/widgets/tiles/product_grid_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/home_controller.dart';
+import 'package:catchup_app/screens/cart/cart_screen.dart';
+import 'package:catchup_app/screens/search_delegate/product_search_delegate.dart';
+import 'package:catchup_app/widgets/tabbed/bottom_navbar.dart';
+import 'package:catchup_app/widgets/tabbed/category_tab_bar.dart';
+import 'package:catchup_app/widgets/tiles/product_grid_tile.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -34,8 +34,7 @@ class Home extends StatelessWidget {
             SliverAppBar(
               leading: IconButton(
                 onPressed: () {
-                  showSearch(
-                      context: context, delegate: ProductSearchDelegate());
+                  showSearch(context: context, delegate: ProductSearchDelegate());
                 },
                 icon: SvgPicture.asset(
                   'assets/icons/search_icon_grey.svg',
@@ -67,9 +66,7 @@ class Home extends StatelessWidget {
                   ),
                 )
               ],
-              bottom: PreferredSize(
-                  preferredSize: const Size(double.infinity, 65),
-                  child: CategoryTabBar()),
+              bottom: PreferredSize(preferredSize: const Size(double.infinity, 65), child: CategoryTabBar()),
               floating: true,
               snap: true,
             ),

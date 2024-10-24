@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/models/address.dart';
-import 'package:timberr/screens/input/edit_shipping_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/models/address.dart';
+import 'package:catchup_app/screens/input/edit_shipping_screen.dart';
 
 class AddressCard extends StatelessWidget {
   final Address address;
   final int index;
   final bool isEditable;
-  const AddressCard(
-      {super.key,
-      this.isEditable = true,
-      required this.address,
-      required this.index});
+  const AddressCard({super.key, this.isEditable = true, required this.address, required this.index});
 
   void _onEditTap() {
     Get.to(

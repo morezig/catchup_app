@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/screens/favorite_screen.dart';
-import 'package:timberr/screens/home.dart';
-import 'package:timberr/screens/notification_screen.dart';
-import 'package:timberr/screens/profile/profile_screen.dart';
+import 'package:catchup_app/screens/favorite_screen.dart';
+import 'package:catchup_app/screens/home.dart';
+import 'package:catchup_app/screens/notification_screen.dart';
+import 'package:catchup_app/screens/profile/profile_screen.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int selectedPos;
@@ -28,8 +28,7 @@ class BottomNavBar extends StatelessWidget {
             Get.off(() => FavoriteScreen(), transition: Transition.fadeIn);
             break;
           case 2:
-            Get.off(() => const NotificationScreen(),
-                transition: Transition.fadeIn);
+            Get.off(() => const NotificationScreen(), transition: Transition.fadeIn);
             break;
           case 3:
             Get.off(() => ProfileScreen(), transition: Transition.fadeIn);
@@ -49,16 +48,14 @@ class BottomNavBar extends StatelessWidget {
           icon: SvgPicture.asset(
             'assets/icons/favorite_icon.svg',
           ),
-          activeIcon:
-              SvgPicture.asset('assets/icons/favorite_selected_icon.svg'),
+          activeIcon: SvgPicture.asset('assets/icons/favorite_selected_icon.svg'),
         ),
         BottomNavigationBarItem(
           label: "notification",
           icon: SvgPicture.asset(
             'assets/icons/notification_icon.svg',
           ),
-          activeIcon:
-              SvgPicture.asset('assets/icons/notification_selected_icon.svg'),
+          activeIcon: SvgPicture.asset('assets/icons/notification_selected_icon.svg'),
         ),
         BottomNavigationBarItem(
           label: "person",

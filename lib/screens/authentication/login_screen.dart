@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/auth_controller.dart';
-import 'package:timberr/screens/authentication/register_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/auth_controller.dart';
+import 'package:catchup_app/screens/authentication/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -143,8 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             onChanged: _emailOnChanged,
                             validator: _emailValidator,
                             cursorColor: kOffBlack,
-                            decoration: inputDecorationConst.copyWith(
-                                labelText: "Email"),
+                            decoration: inputDecorationConst.copyWith(labelText: "Email"),
                           ),
                         ),
                         Padding(
@@ -159,8 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             decoration: inputDecorationConst.copyWith(
                               labelText: "Password",
                               suffixIcon: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 25, right: 15),
+                                padding: const EdgeInsets.only(top: 25, right: 15),
                                 child: GestureDetector(
                                   onTap: _togglePasswordVisibility,
                                   child: SvgPicture.asset(
@@ -170,8 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 ),
                               ),
-                              suffixIconConstraints:
-                                  const BoxConstraints(maxWidth: 50),
+                              suffixIconConstraints: const BoxConstraints(maxWidth: 50),
                             ),
                           ),
                         ),

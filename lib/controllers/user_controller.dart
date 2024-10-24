@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/models/user_data.dart';
-import 'package:timberr/screens/authentication/onboarding_welcome.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/models/user_data.dart';
+import 'package:catchup_app/screens/authentication/onboarding_welcome.dart';
 
 class UserController extends GetxController {
   final _supabaseClient = Supabase.instance.client;
@@ -12,8 +12,7 @@ class UserController extends GetxController {
   Future<void> fetchUserData() async {
     final response = await _supabaseClient
         .from("Users")
-        .select(
-            "Name, Email, profile_picture_url, sales_notification, delivery_status_notification, new_arrivals_notification")
+        .select("Name, Email, profile_picture_url, sales_notification, delivery_status_notification, new_arrivals_notification")
         .eq("Uid", _supabaseClient.auth.currentUser!.id);
     userData = UserData.fromJson(response[0]);
     update();
@@ -57,53 +56,39 @@ class UserController extends GetxController {
           fileOptions: const FileOptions(upsert: true),
         );
     //TODO: Handle Upload Profile pic Error
-    final imageUrlResponse =
-        _supabaseClient.storage.from('profile-pics').getPublicUrl(filePath);
+    final imageUrlResponse = _supabaseClient.storage.from('profile-pics').getPublicUrl(filePath);
 
     //update profile picture url
     userData.profilePictureUrl = imageUrlResponse;
     if (userData.profilePictureUrl != null) {
-      userData.profilePictureUrl =
-          "${userData.profilePictureUrl!}?v=${DateTime.now().toIso8601String()}";
+      userData.profilePictureUrl = "${userData.profilePictureUrl!}?v=${DateTime.now().toIso8601String()}";
     }
     update();
-    await _supabaseClient
-        .from("Users")
-        .update({"profile_picture_url": imageUrlResponse}).eq(
-            "Uid", _supabaseClient.auth.currentUser!.id);
+    await _supabaseClient.from("Users").update({"profile_picture_url": imageUrlResponse}).eq("Uid", _supabaseClient.auth.currentUser!.id);
   }
 
   Future<void> setSalesNotification(bool val) async {
     userData.salesNotification = val;
     update();
-    await _supabaseClient.from("Users").update({"sales_notification": val}).eq(
-        "Uid", _supabaseClient.auth.currentUser!.id);
+    await _supabaseClient.from("Users").update({"sales_notification": val}).eq("Uid", _supabaseClient.auth.currentUser!.id);
   }
 
   Future<void> setDeliveryStatusNotification(bool val) async {
     userData.deliveryStatusNotification = val;
     update();
-    await _supabaseClient
-        .from("Users")
-        .update({"delivery_status_notification": val}).eq(
-            "Uid", _supabaseClient.auth.currentUser!.id);
+    await _supabaseClient.from("Users").update({"delivery_status_notification": val}).eq("Uid", _supabaseClient.auth.currentUser!.id);
   }
 
   Future<void> setNewArrivalsNotification(bool val) async {
     userData.newArrivalsNotification = val;
     update();
-    await _supabaseClient
-        .from("Users")
-        .update({"new_arrivals_notification": val}).eq(
-            "Uid", _supabaseClient.auth.currentUser!.id);
+    await _supabaseClient.from("Users").update({"new_arrivals_notification": val}).eq("Uid", _supabaseClient.auth.currentUser!.id);
   }
 
   Future<void> setName(String name) async {
     userData.name = name;
     update();
-    await _supabaseClient
-        .from("Users")
-        .update({"Name": name}).eq("Uid", _supabaseClient.auth.currentUser!.id);
+    await _supabaseClient.from("Users").update({"Name": name}).eq("Uid", _supabaseClient.auth.currentUser!.id);
     Get.back();
   }
 
@@ -114,8 +99,7 @@ class UserController extends GetxController {
       onYesPressed: () async {
         Get.back();
         await _supabaseClient.auth.resetPasswordForEmail(userData.email);
-        Get.snackbar("Reset Password",
-            "Your Password reset request has been sent to your email successfully");
+        Get.snackbar("Reset Password", "Your Password reset request has been sent to your email successfully");
       },
     );
   }

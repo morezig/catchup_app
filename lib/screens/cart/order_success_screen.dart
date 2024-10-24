@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/screens/profile/orders_screen.dart';
-import 'package:timberr/widgets/buttons/custom_elevated_button.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/screens/profile/orders_screen.dart';
+import 'package:catchup_app/widgets/buttons/custom_elevated_button.dart';
 
 class OrderSuccessScreen extends StatelessWidget {
   const OrderSuccessScreen({super.key});

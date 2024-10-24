@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:timberr/controllers/address_controller.dart';
-import 'package:timberr/controllers/card_details_controller.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/controllers/favorites_controller.dart';
-import 'package:timberr/controllers/home_controller.dart';
-import 'package:timberr/controllers/user_controller.dart';
-import 'package:timberr/screens/home.dart';
+import 'package:catchup_app/controllers/address_controller.dart';
+import 'package:catchup_app/controllers/card_details_controller.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/controllers/favorites_controller.dart';
+import 'package:catchup_app/controllers/home_controller.dart';
+import 'package:catchup_app/controllers/user_controller.dart';
+import 'package:catchup_app/screens/home.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({super.key});
@@ -37,8 +37,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child:
-            LottieBuilder.asset("assets/lottie/splash_loading_animation.json"),
+        child: LottieBuilder.asset("assets/lottie/splash_loading_animation.json"),
       ),
     );
   }

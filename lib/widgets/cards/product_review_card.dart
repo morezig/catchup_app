@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class ProductReviewCard extends StatelessWidget {
   final String reviewerName;
@@ -8,13 +8,7 @@ class ProductReviewCard extends StatelessWidget {
   final int ratingValue;
   final String reviewDescription;
   final String profileImageUrl;
-  const ProductReviewCard(
-      {super.key,
-      required this.reviewerName,
-      required this.dateString,
-      required this.ratingValue,
-      required this.reviewDescription,
-      required this.profileImageUrl});
+  const ProductReviewCard({super.key, required this.reviewerName, required this.dateString, required this.ratingValue, required this.reviewDescription, required this.profileImageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +37,7 @@ class ProductReviewCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,

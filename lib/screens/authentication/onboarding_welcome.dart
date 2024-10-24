@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/screens/authentication/login_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/screens/authentication/login_screen.dart';
 
 class OnBoardingWelcomeScreen extends StatelessWidget {
   const OnBoardingWelcomeScreen({super.key});

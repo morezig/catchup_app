@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/widgets/tabbed/bottom_navbar.dart';
-import 'package:timberr/widgets/tiles/notification_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/widgets/tabbed/bottom_navbar.dart';
+import 'package:catchup_app/widgets/tiles/notification_tile.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({super.key});
@@ -26,8 +26,7 @@ class NotificationScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             return NotificationTile(
               name: "Your order #${(index + 1) * 103} has been confirmed",
-              description:
-                  "Lorem ipsum dolor amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec. ",
+              description: "Lorem ipsum dolor amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec. ",
               isNew: (index == 1 || index == 8) ? true : false,
             );
           },

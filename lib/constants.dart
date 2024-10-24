@@ -19,13 +19,10 @@ const kSeaGreen = Color(0xFF2AA952);
 const kCrayolaGreen = Color(0xFF27AE60);
 const kFireOpal = Color(0xFFEB5757);
 
-const String supabaseUrl = "https://wzicmnwevvqgzttnmvou.supabase.co";
-const kNunitoSans10Grey =
-    TextStyle(fontFamily: "NunitoSans", fontSize: 10, color: kGrey);
-const kNunitoSans12Grey =
-    TextStyle(fontFamily: "NunitoSans", fontSize: 12, color: kGrey);
-const kNunitoSans12TrolleyGrey =
-    TextStyle(fontFamily: "NunitoSans", fontSize: 12, color: kTrolleyGrey);
+const String supabaseUrl = "https://ymxkgjrvbmomfecpjyah.supabase.co";
+const kNunitoSans10Grey = TextStyle(fontFamily: "NunitoSans", fontSize: 10, color: kGrey);
+const kNunitoSans12Grey = TextStyle(fontFamily: "NunitoSans", fontSize: 12, color: kGrey);
+const kNunitoSans12TrolleyGrey = TextStyle(fontFamily: "NunitoSans", fontSize: 12, color: kTrolleyGrey);
 const kNunitoSansSemiBold12 = TextStyle(
   fontFamily: "NunitoSans",
   fontSize: 12,
@@ -66,8 +63,7 @@ const kNunitoSansBold16 = TextStyle(
   color: kOffBlack,
 );
 const kNunitoSans18 = TextStyle(fontFamily: "NunitoSans", fontSize: 18);
-const kNunitoSansTinGrey18 =
-    TextStyle(fontFamily: "NunitoSans", fontSize: 18, color: kTinGrey);
+const kNunitoSansTinGrey18 = TextStyle(fontFamily: "NunitoSans", fontSize: 18, color: kTinGrey);
 const kNunitoSansBold18 = TextStyle(
   fontFamily: "NunitoSans",
   fontSize: 18,
@@ -80,32 +76,16 @@ const kNunitoSansSemiBold18 = TextStyle(
   color: kOffBlack,
   fontWeight: FontWeight.w600,
 );
-const kNunitoSansSemiBold20White = TextStyle(
-    fontFamily: "NunitoSans",
-    fontSize: 20,
-    fontWeight: FontWeight.w600,
-    color: Colors.white);
-const kNunitoSansBold20 = TextStyle(
-    fontFamily: "NunitoSans",
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    color: kOffBlack);
-const kNunitoSansBold24 = TextStyle(
-    fontFamily: "NunitoSans",
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
-    color: kOffBlack);
+const kNunitoSansSemiBold20White = TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white);
+const kNunitoSansBold20 = TextStyle(fontFamily: "NunitoSans", fontSize: 20, fontWeight: FontWeight.bold, color: kOffBlack);
+const kNunitoSansBold24 = TextStyle(fontFamily: "NunitoSans", fontSize: 24, fontWeight: FontWeight.bold, color: kOffBlack);
 const kMerriweatherBold16 = TextStyle(
   fontFamily: "Merriweather",
   fontSize: 16,
   fontWeight: FontWeight.bold,
   color: kOffBlack,
 );
-const kMerriweatherBold24 = TextStyle(
-    fontFamily: "Merriweather",
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
-    letterSpacing: 1.2);
+const kMerriweatherBold24 = TextStyle(fontFamily: "Merriweather", fontSize: 24, fontWeight: FontWeight.bold, letterSpacing: 1.2);
 const kMerriweather30TinGrey = TextStyle(
   fontFamily: "Merriweather",
   fontSize: 30,
@@ -160,8 +140,7 @@ Future<bool> kOnExitConfirmation() async {
   return exit;
 }
 
-Future kDefaultDialog(String title, String message,
-    {VoidCallback? onYesPressed}) async {
+Future kDefaultDialog(String title, String message, {VoidCallback? onYesPressed}) async {
   if (GetPlatform.isIOS) {
     await Get.dialog(
       CupertinoAlertDialog(

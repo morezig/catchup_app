@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/models/product.dart';
-import 'package:timberr/services/search_service.dart';
-import 'package:timberr/widgets/tiles/product_grid_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/models/product.dart';
+import 'package:catchup_app/services/search_service.dart';
+import 'package:catchup_app/widgets/tiles/product_grid_tile.dart';
 
 class ProductSearchDelegate extends SearchDelegate {
   @override
@@ -48,13 +48,10 @@ class ProductSearchDelegate extends SearchDelegate {
                 ),
               );
             } else {
-              List<Product> productList = responseList
-                  .map((productResponse) => Product.fromJson(productResponse))
-                  .toList();
+              List<Product> productList = responseList.map((productResponse) => Product.fromJson(productResponse)).toList();
               return GridView.builder(
                 physics: const BouncingScrollPhysics(),
-                padding:
-                    const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
+                padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
                 itemCount: productList.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,

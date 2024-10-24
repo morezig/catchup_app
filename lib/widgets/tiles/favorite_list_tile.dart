@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/controllers/favorites_controller.dart';
-import 'package:timberr/models/product.dart';
-import 'package:timberr/screens/product/product_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/controllers/favorites_controller.dart';
+import 'package:catchup_app/models/product.dart';
+import 'package:catchup_app/screens/product/product_screen.dart';
 
 class FavoriteListTile extends StatelessWidget {
   final Product product;

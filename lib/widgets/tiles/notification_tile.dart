@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class NotificationTile extends StatelessWidget {
   final String name;
   final String description;
   final bool isNew;
-  const NotificationTile(
-      {super.key,
-      required this.name,
-      required this.description,
-      required this.isNew});
+  const NotificationTile({super.key, required this.name, required this.description, required this.isNew});
 
   @override
   Widget build(BuildContext context) {

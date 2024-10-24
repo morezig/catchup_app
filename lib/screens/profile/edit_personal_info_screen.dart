@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/user_controller.dart';
-import 'package:timberr/widgets/buttons/custom_elevated_button.dart';
-import 'package:timberr/widgets/input/custom_input_box.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/user_controller.dart';
+import 'package:catchup_app/widgets/buttons/custom_elevated_button.dart';
+import 'package:catchup_app/widgets/input/custom_input_box.dart';
 
 class EditPersonalInformationScreen extends StatefulWidget {
   const EditPersonalInformationScreen({super.key});
 
   @override
-  State<EditPersonalInformationScreen> createState() =>
-      _EditPersonalInformationScreenState();
+  State<EditPersonalInformationScreen> createState() => _EditPersonalInformationScreenState();
 }
 
-class _EditPersonalInformationScreenState
-    extends State<EditPersonalInformationScreen> {
+class _EditPersonalInformationScreenState extends State<EditPersonalInformationScreen> {
   String name = "";
   final _formKey = GlobalKey<FormState>();
   final UserController _userController = Get.find();

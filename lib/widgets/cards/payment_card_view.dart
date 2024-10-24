@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class PaymentCardView extends StatelessWidget {
   final bool? isMasterCard;
@@ -8,13 +8,7 @@ class PaymentCardView extends StatelessWidget {
   final String lastFourDigits;
   final String cardHolderName;
   final String expiryDateString;
-  const PaymentCardView(
-      {super.key,
-      required this.lastFourDigits,
-      required this.cardHolderName,
-      required this.expiryDateString,
-      this.isSelected = true,
-      this.isMasterCard});
+  const PaymentCardView({super.key, required this.lastFourDigits, required this.cardHolderName, required this.expiryDateString, this.isSelected = true, this.isMasterCard});
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +43,10 @@ class PaymentCardView extends StatelessWidget {
         children: [
           (isMasterCard == null)
               ? Row(
-                  children: [
-                    SvgPicture.asset("assets/icons/mastercard.svg"),
-                    const SizedBox(width: 20),
-                    SvgPicture.asset("assets/icons/visacard.svg")
-                  ],
+                  children: [SvgPicture.asset("assets/icons/mastercard.svg"), const SizedBox(width: 20), SvgPicture.asset("assets/icons/visacard.svg")],
                 )
               : SvgPicture.asset(
-                  (isMasterCard!)
-                      ? "assets/icons/mastercard.svg"
-                      : "assets/icons/visacard.svg",
+                  (isMasterCard!) ? "assets/icons/mastercard.svg" : "assets/icons/visacard.svg",
                 ),
           RichText(
             text: TextSpan(

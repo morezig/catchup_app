@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class OrderCard extends StatelessWidget {
   final int orderNumber;
@@ -7,13 +7,7 @@ class OrderCard extends StatelessWidget {
   final int totalAmount;
   final int orderStatus;
   final String dateString;
-  const OrderCard(
-      {super.key,
-      required this.orderNumber,
-      required this.quantity,
-      required this.totalAmount,
-      required this.dateString,
-      this.orderStatus = 1});
+  const OrderCard({super.key, required this.orderNumber, required this.quantity, required this.totalAmount, required this.dateString, this.orderStatus = 1});
 
   @override
   Widget build(BuildContext context) {

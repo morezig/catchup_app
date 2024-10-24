@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class SettingsTextBox extends StatelessWidget {
   final String fieldName;
   final String value;
 
-  const SettingsTextBox(
-      {super.key, required this.fieldName, required this.value});
+  const SettingsTextBox({super.key, required this.fieldName, required this.value});
 
   @override
   Widget build(BuildContext context) {

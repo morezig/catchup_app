@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/user_controller.dart';
-import 'package:timberr/screens/profile/edit_personal_info_screen.dart';
-import 'package:timberr/widgets/input/settings_text_box.dart';
-import 'package:timberr/widgets/tiles/settings_row_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/user_controller.dart';
+import 'package:catchup_app/screens/profile/edit_personal_info_screen.dart';
+import 'package:catchup_app/widgets/input/settings_text_box.dart';
+import 'package:catchup_app/widgets/tiles/settings_row_tile.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SettingsScreen extends StatelessWidget {

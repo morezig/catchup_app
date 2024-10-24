@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/address_controller.dart';
-import 'package:timberr/controllers/card_details_controller.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/controllers/favorites_controller.dart';
-import 'package:timberr/controllers/home_controller.dart';
-import 'package:timberr/controllers/user_controller.dart';
-import 'package:timberr/screens/authentication/onboarding_welcome.dart';
-import 'package:timberr/screens/authentication/splash_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/address_controller.dart';
+import 'package:catchup_app/controllers/card_details_controller.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/controllers/favorites_controller.dart';
+import 'package:catchup_app/controllers/home_controller.dart';
+import 'package:catchup_app/controllers/user_controller.dart';
+import 'package:catchup_app/screens/authentication/onboarding_welcome.dart';
+import 'package:catchup_app/screens/authentication/splash_screen.dart';
 
 class Wrapper extends StatefulWidget {
   const Wrapper({super.key});

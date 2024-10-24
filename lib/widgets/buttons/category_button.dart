@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class CategoryButton extends StatelessWidget {
   final String iconPath;
   final String name;
   final bool isSelected;
   final void Function() onTap;
-  const CategoryButton(
-      {super.key,
-      required this.iconPath,
-      required this.name,
-      this.isSelected = false,
-      required this.onTap});
+  const CategoryButton({super.key, required this.iconPath, required this.name, this.isSelected = false, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

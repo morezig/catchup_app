@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/controllers/favorites_controller.dart';
-import 'package:timberr/controllers/product_page_controller.dart';
-import 'package:timberr/models/product.dart';
-import 'package:timberr/screens/product/product_review_screen.dart';
-import 'package:timberr/widgets/animation/fade_in_widget.dart';
-import 'package:timberr/widgets/buttons/custom_elevated_button.dart';
-import 'package:timberr/widgets/tabbed/color_selection_column.dart';
-import 'package:timberr/widgets/tabbed/product_image_view.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/controllers/favorites_controller.dart';
+import 'package:catchup_app/controllers/product_page_controller.dart';
+import 'package:catchup_app/models/product.dart';
+import 'package:catchup_app/screens/product/product_review_screen.dart';
+import 'package:catchup_app/widgets/animation/fade_in_widget.dart';
+import 'package:catchup_app/widgets/buttons/custom_elevated_button.dart';
+import 'package:catchup_app/widgets/tabbed/color_selection_column.dart';
+import 'package:catchup_app/widgets/tabbed/product_image_view.dart';
 
 class ProductScreen extends StatelessWidget {
   final Product product;
@@ -32,8 +32,7 @@ class ProductScreen extends StatelessWidget {
 
   int _favIndex() {
     for (int i = 0; i < _favoriteController.favoritesList.length; i++) {
-      if (product.productId ==
-          _favoriteController.favoritesList.elementAt(i).productId) return i;
+      if (product.productId == _favoriteController.favoritesList.elementAt(i).productId) return i;
     }
     return -1;
   }
@@ -104,10 +103,7 @@ class ProductScreen extends StatelessWidget {
                   children: [
                     Text(
                       '\$ ${product.price}',
-                      style: const TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: kOffBlack),
+                      style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: kOffBlack),
                     ),
                     Row(
                       children: [
@@ -223,9 +219,7 @@ class ProductScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(16),
                             ),
                             child: SvgPicture.asset(
-                              (index == -1)
-                                  ? 'assets/icons/favorite_icon_black.svg'
-                                  : 'assets/icons/favorite_selected_icon.svg',
+                              (index == -1) ? 'assets/icons/favorite_icon_black.svg' : 'assets/icons/favorite_selected_icon.svg',
                               height: 24,
                               width: 24,
                               fit: BoxFit.scaleDown,

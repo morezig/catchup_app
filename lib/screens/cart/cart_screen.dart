@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/screens/cart/check_out_screen.dart';
-import 'package:timberr/widgets/buttons/custom_elevated_button.dart';
-import 'package:timberr/widgets/tiles/cart_list_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/screens/cart/check_out_screen.dart';
+import 'package:catchup_app/widgets/buttons/custom_elevated_button.dart';
+import 'package:catchup_app/widgets/tiles/cart_list_tile.dart';
 
 class CartScreen extends StatelessWidget {
   CartScreen({super.key});
@@ -92,8 +92,7 @@ class CartScreen extends StatelessWidget {
                       cursorColor: kOffBlack,
                       decoration: InputDecoration(
                         counter: const Offstage(),
-                        contentPadding:
-                            const EdgeInsets.only(left: 20, top: 25),
+                        contentPadding: const EdgeInsets.only(left: 20, top: 25),
                         enabledBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                             color: Color(0x128A959E),

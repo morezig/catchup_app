@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class ProfileTile extends StatelessWidget {
   final String name;
   final String description;
   final VoidCallback onTap;
-  const ProfileTile(
-      {super.key,
-      required this.name,
-      required this.description,
-      required this.onTap});
+  const ProfileTile({super.key, required this.name, required this.description, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/address_controller.dart';
-import 'package:timberr/controllers/card_details_controller.dart';
-import 'package:timberr/controllers/payment_controller.dart';
-import 'package:timberr/screens/profile/payment_methods_screen.dart';
-import 'package:timberr/screens/profile/shipping_address_screen.dart';
-import 'package:timberr/widgets/buttons/custom_elevated_button.dart';
-import 'package:timberr/widgets/cards/address_card.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/address_controller.dart';
+import 'package:catchup_app/controllers/card_details_controller.dart';
+import 'package:catchup_app/controllers/payment_controller.dart';
+import 'package:catchup_app/screens/profile/payment_methods_screen.dart';
+import 'package:catchup_app/screens/profile/shipping_address_screen.dart';
+import 'package:catchup_app/widgets/buttons/custom_elevated_button.dart';
+import 'package:catchup_app/widgets/cards/address_card.dart';
 
 class CheckOutScreen extends StatelessWidget {
   final int orderAmount;
@@ -91,8 +91,7 @@ class CheckOutScreen extends StatelessWidget {
                 if (addressController.addressList.isNotEmpty) {
                   return AddressCard(
                     isEditable: false,
-                    address: addressController
-                        .addressList[addressController.selectedIndex],
+                    address: addressController.addressList[addressController.selectedIndex],
                     index: addressController.selectedIndex,
                   );
                 } else {

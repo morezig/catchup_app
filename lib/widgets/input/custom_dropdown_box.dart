@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class CustomDropdownBox extends StatefulWidget {
   final String headerText;
@@ -8,14 +8,7 @@ class CustomDropdownBox extends StatefulWidget {
   final Function(String val) onChanged;
   final String? Function(dynamic val)? validator;
   final String? initialValue;
-  const CustomDropdownBox(
-      {super.key,
-      required this.headerText,
-      required this.hintText,
-      required this.items,
-      required this.onChanged,
-      this.validator,
-      this.initialValue});
+  const CustomDropdownBox({super.key, required this.headerText, required this.hintText, required this.items, required this.onChanged, this.validator, this.initialValue});
 
   @override
   State<CustomDropdownBox> createState() => _CustomDropdownBoxState();

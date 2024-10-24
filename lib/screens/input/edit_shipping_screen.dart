@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/address_controller.dart';
-import 'package:timberr/models/address.dart';
-import 'package:timberr/widgets/buttons/custom_elevated_button.dart';
-import 'package:timberr/widgets/input/custom_dropdown_box.dart';
-import 'package:timberr/widgets/input/custom_input_box.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/address_controller.dart';
+import 'package:catchup_app/models/address.dart';
+import 'package:catchup_app/widgets/buttons/custom_elevated_button.dart';
+import 'package:catchup_app/widgets/input/custom_dropdown_box.dart';
+import 'package:catchup_app/widgets/input/custom_input_box.dart';
 
 class EditShippingScreen extends StatelessWidget {
   final Address initialAddress;
@@ -13,8 +13,7 @@ class EditShippingScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final AddressController _addressController = Get.find();
 
-  EditShippingScreen(
-      {super.key, required this.initialAddress, required this.index}) {
+  EditShippingScreen({super.key, required this.initialAddress, required this.index}) {
     _addressController.name = initialAddress.name;
     _addressController.address = initialAddress.address;
     _addressController.pincode = initialAddress.pincode;

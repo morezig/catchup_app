@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:timberr/models/card_detail.dart';
+import 'package:catchup_app/models/card_detail.dart';
 
 class CardDetailsController extends GetxController {
   final _supabaseClient = Supabase.instance.client;
@@ -9,11 +9,7 @@ class CardDetailsController extends GetxController {
 
   String getLastFourDigits() {
     if (cardDetailList.isNotEmpty) {
-      return cardDetailList
-          .elementAt(selectedIndex.value)
-          .cardNumber
-          .toString()
-          .substring(12);
+      return cardDetailList.elementAt(selectedIndex.value).cardNumber.toString().substring(12);
     }
     return "XXXX";
   }
@@ -32,11 +28,10 @@ class CardDetailsController extends GetxController {
 
   Future<void> getDefaultCardDetail() async {
     //get default card detail
-    final defaultShippingResponse =
-        await _supabaseClient.from("Users").select('default_card_detail_id').eq(
-              "Uid",
-              _supabaseClient.auth.currentUser!.id,
-            );
+    final defaultShippingResponse = await _supabaseClient.from("Users").select('default_card_detail_id').eq(
+          "Uid",
+          _supabaseClient.auth.currentUser!.id,
+        );
     int? responseId = defaultShippingResponse[0]['default_card_detail_id'];
     await fetchCardDetails();
     if (responseId != null) {
@@ -54,8 +49,7 @@ class CardDetailsController extends GetxController {
       return;
     }
     selectedIndex.value = index;
-    await _supabaseClient.from("Users").update(
-        {'default_card_detail_id': cardDetailList.elementAt(index).id}).eq(
+    await _supabaseClient.from("Users").update({'default_card_detail_id': cardDetailList.elementAt(index).id}).eq(
       "Uid",
       _supabaseClient.auth.currentUser!.id,
     );

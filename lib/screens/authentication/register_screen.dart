@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/auth_controller.dart';
-import 'package:timberr/screens/authentication/login_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/auth_controller.dart';
+import 'package:catchup_app/screens/authentication/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -147,8 +147,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             textCapitalization: TextCapitalization.words,
                             onChanged: _nameOnChanged,
                             validator: _nameValidator,
-                            decoration: inputDecorationConst.copyWith(
-                                labelText: "Name"),
+                            decoration: inputDecorationConst.copyWith(labelText: "Name"),
                           ),
                         ),
                         Padding(
@@ -162,8 +161,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             cursorColor: kOffBlack,
                             onChanged: _emailOnChanged,
                             validator: _emailValidator,
-                            decoration: inputDecorationConst.copyWith(
-                                labelText: "Email"),
+                            decoration: inputDecorationConst.copyWith(labelText: "Email"),
                           ),
                         ),
                         Padding(
@@ -179,8 +177,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             decoration: inputDecorationConst.copyWith(
                               labelText: "Password",
                               suffixIcon: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 25, right: 15),
+                                padding: const EdgeInsets.only(top: 25, right: 15),
                                 child: GestureDetector(
                                   onTap: _togglePasswordVisibility,
                                   child: SvgPicture.asset(
@@ -190,8 +187,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   ),
                                 ),
                               ),
-                              suffixIconConstraints:
-                                  const BoxConstraints(maxWidth: 50),
+                              suffixIconConstraints: const BoxConstraints(maxWidth: 50),
                             ),
                           ),
                         ),
@@ -207,8 +203,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             decoration: inputDecorationConst.copyWith(
                               labelText: "Confirm Password",
                               suffixIcon: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 25, right: 15),
+                                padding: const EdgeInsets.only(top: 25, right: 15),
                                 child: GestureDetector(
                                   onTap: _togglePasswordVisibility,
                                   child: SvgPicture.asset(
@@ -218,8 +213,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   ),
                                 ),
                               ),
-                              suffixIconConstraints:
-                                  const BoxConstraints(maxWidth: 50),
+                              suffixIconConstraints: const BoxConstraints(maxWidth: 50),
                             ),
                           ),
                         ),

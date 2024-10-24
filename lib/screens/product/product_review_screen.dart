@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/widgets/cards/product_review_card.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/widgets/cards/product_review_card.dart';
 
 class ProductReviewScreen extends StatelessWidget {
   const ProductReviewScreen({super.key});
@@ -99,8 +99,7 @@ class ProductReviewScreen extends StatelessWidget {
                   reviewerName: "Aditya R",
                   ratingValue: index % 5 + 1,
                   dateString: "25/12/2021",
-                  profileImageUrl:
-                      "https://avatars.githubusercontent.com/u/62930521?v=4",
+                  profileImageUrl: "https://avatars.githubusercontent.com/u/62930521?v=4",
                   reviewDescription:
                       "Nice Furniture with good delivery. The delivery time is very fast. Then products look like exactly the picture in the app. Besides, color is also the same and quality is very good despite very cheap price",
                 );

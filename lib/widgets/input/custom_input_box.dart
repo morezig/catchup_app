@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class CustomInputBox extends StatefulWidget {
   final String headerText;
@@ -120,8 +120,7 @@ class _CustomInputBoxState extends State<CustomInputBox> {
 
 class CreditCardFormatter extends TextInputFormatter {
   @override
-  TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
     String actualText = newValue.text.replaceAll(" ", "");
     String newText = "";
     for (int i = 0; i < actualText.length; i++) {
@@ -131,16 +130,13 @@ class CreditCardFormatter extends TextInputFormatter {
       newText += actualText[i];
     }
 
-    return newValue.copyWith(
-        text: newText,
-        selection: TextSelection.collapsed(offset: newText.length));
+    return newValue.copyWith(text: newText, selection: TextSelection.collapsed(offset: newText.length));
   }
 }
 
 class DateFormatter extends TextInputFormatter {
   @override
-  TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
     String actualText = newValue.text.replaceAll("/", "");
     String newText = "";
     for (int i = 0; i < actualText.length; i++) {

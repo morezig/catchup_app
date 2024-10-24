@@ -2,10 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/models/product.dart';
-import 'package:timberr/screens/product/product_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/models/product.dart';
+import 'package:catchup_app/screens/product/product_screen.dart';
 
 class ProductGridTile extends StatelessWidget {
   final Product product;
@@ -46,8 +46,7 @@ class ProductGridTile extends StatelessWidget {
                       CachedNetworkImage(
                         cacheKey: product.imagesList[0],
                         imageUrl: product.imagesList[0],
-                        progressIndicatorBuilder:
-                            (context, url, downloadProgress) {
+                        progressIndicatorBuilder: (context, url, downloadProgress) {
                           if (downloadProgress.progress == null) {
                             return const SizedBox();
                           } else {

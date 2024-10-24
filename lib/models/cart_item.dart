@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/models/product.dart';
+import 'package:catchup_app/models/product.dart';
 
 class CartItem extends Product {
   int cartId;
   int quantity;
   late Color color;
-  CartItem(
-      this.cartId, this.quantity, String colorString, Map<String, dynamic> json)
+  CartItem(this.cartId, this.quantity, String colorString, Map<String, dynamic> json)
       : super(
           json['product_id'],
           json['name'],

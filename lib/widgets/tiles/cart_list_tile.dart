@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/models/cart_item.dart';
-import 'package:timberr/screens/product/product_screen.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/models/cart_item.dart';
+import 'package:catchup_app/screens/product/product_screen.dart';
 
 class CartListTile extends StatelessWidget {
   final CartItem cartItem;

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/cart_controller.dart';
-import 'package:timberr/controllers/favorites_controller.dart';
-import 'package:timberr/screens/cart/cart_screen.dart';
-import 'package:timberr/screens/search_delegate/favorite_search_delegate.dart';
-import 'package:timberr/widgets/tabbed/bottom_navbar.dart';
-import 'package:timberr/widgets/tiles/favorite_list_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/cart_controller.dart';
+import 'package:catchup_app/controllers/favorites_controller.dart';
+import 'package:catchup_app/screens/cart/cart_screen.dart';
+import 'package:catchup_app/screens/search_delegate/favorite_search_delegate.dart';
+import 'package:catchup_app/widgets/tabbed/bottom_navbar.dart';
+import 'package:catchup_app/widgets/tiles/favorite_list_tile.dart';
 
 class FavoriteScreen extends StatelessWidget {
   FavoriteScreen({super.key});
@@ -22,10 +22,7 @@ class FavoriteScreen extends StatelessWidget {
 
   void _addAllToCart() async {
     for (int i = 0; i < _favoritesController.favoritesList.length; i++) {
-      await _cartController.addToCart(
-          _favoritesController.favoritesList.elementAt(i),
-          _favoritesController.favoritesList.elementAt(i).colorsList[0],
-          showSnackbar: false);
+      await _cartController.addToCart(_favoritesController.favoritesList.elementAt(i), _favoritesController.favoritesList.elementAt(i).colorsList[0], showSnackbar: false);
     }
     Get.snackbar(
       "Added to Cart",
@@ -80,8 +77,7 @@ class FavoriteScreen extends StatelessWidget {
                   itemCount: _favoritesController.favoritesList.length,
                   itemBuilder: (context, index) {
                     return FavoriteListTile(
-                      product:
-                          _favoritesController.favoritesList.elementAt(index),
+                      product: _favoritesController.favoritesList.elementAt(index),
                     );
                   },
                   separatorBuilder: (context, index) {
@@ -111,8 +107,7 @@ class FavoriteScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "Add all to my cart",
-                      style:
-                          kNunitoSansSemiBold18.copyWith(color: Colors.white),
+                      style: kNunitoSansSemiBold18.copyWith(color: Colors.white),
                     ),
                   ),
                 ),

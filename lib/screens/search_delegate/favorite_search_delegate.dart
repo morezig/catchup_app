@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/controllers/favorites_controller.dart';
-import 'package:timberr/models/product.dart';
-import 'package:timberr/widgets/tiles/favorite_list_tile.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/controllers/favorites_controller.dart';
+import 'package:catchup_app/models/product.dart';
+import 'package:catchup_app/widgets/tiles/favorite_list_tile.dart';
 
 class FavoriteSearchDelegate extends SearchDelegate {
   final FavoritesController _favoritesController = Get.find();
@@ -41,9 +41,7 @@ class FavoriteSearchDelegate extends SearchDelegate {
   }
 
   Widget resultsList() {
-    List<Product> results = _favoritesController.favoritesList
-        .where((p) => (p.name.contains(query)))
-        .toList();
+    List<Product> results = _favoritesController.favoritesList.where((p) => (p.name.contains(query))).toList();
     return ListView.separated(
       physics: const BouncingScrollPhysics(),
       itemCount: results.length,

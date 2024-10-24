@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:timberr/constants.dart';
-import 'package:timberr/private_keys.dart';
-import 'package:timberr/wrapper.dart';
+import 'package:catchup_app/constants.dart';
+import 'package:catchup_app/private_keys.dart';
+import 'package:catchup_app/wrapper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,11 +15,11 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
-  runApp(const TimberrApp());
+  runApp(const CatchupApp());
 }
 
-class TimberrApp extends StatelessWidget {
-  const TimberrApp({super.key});
+class CatchupApp extends StatelessWidget {
+  const CatchupApp({super.key});
 
   @override
   Widget build(BuildContext context) {

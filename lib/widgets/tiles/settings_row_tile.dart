@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:timberr/constants.dart';
+import 'package:catchup_app/constants.dart';
 
 class SettingRowTile extends StatelessWidget {
   final String fieldName;
   final Widget action;
-  const SettingRowTile(
-      {super.key, required this.fieldName, required this.action});
+  const SettingRowTile({super.key, required this.fieldName, required this.action});
 
   @override
   Widget build(BuildContext context) {
